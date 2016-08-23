@@ -1,0 +1,53 @@
+{
+	"variables": [],
+	"info": {
+		"name": "MacroLayer - Users",
+		"_postman_id": "13b09470-426f-d22a-d10e-cabf1cf55580",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users - User - FindById",
+			"request": {
+				"url": "http://localhost:2222/usuarios/123456789",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Users - Health",
+			"request": {
+				"url": "http://localhost:2222/health",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Users - Info",
+			"request": {
+				"url": "http://localhost:2222/info",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
