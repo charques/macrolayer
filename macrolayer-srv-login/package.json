@@ -1,0 +1,20 @@
+{
+  "name": "macrolayer-srv-login",
+  "version": "1.0.0",
+  "description": "NodeJS Login Service",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "charques",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.0",
+    "express": "^4.14.0",
+    "helmet": "^2.1.2",
+    "jsonwebtoken": "^7.1.9",
+    "mongoose": "^4.5.9",
+    "morgan": "^1.7.0"
+  }
+}
