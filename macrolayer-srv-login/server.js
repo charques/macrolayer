@@ -20,7 +20,16 @@ var config = require('./app/config/config'); // get config file
 // =======================
 global.__base = __dirname + '/'; // for better manage of module loads
 var port = process.env.PORT || config.defaultPort;
-mongoose.connect(config.database); // connect to database
+
+var MONGO_DB;
+var DOCKER_DB = process.env.MONGO_PORT;
+console.log('**** ' + DOCKER_DB);
+if ( DOCKER_DB ) {
+    MONGO_DB = DOCKER_DB.replace( 'tcp', 'mongodb' ) + '/so9pojyN';
+} else {
+    MONGO_DB = process.env.MONGODB;
+}
+mongoose.connect(MONGO_DB); // connect to database
 app.set('secret-key', config.secret); // secret variable
 
 // use body parser so we can get info from POST and/or URL parameters
@@ -43,9 +52,6 @@ cors(corsOptions);
 // TODO test if error handling works
 // TODO Eureka
 // TODO tests
-// TODO add user service
-// TODO Wrong authentication code
-// TODO JSHint
 
 // =======================
 // error handling ========

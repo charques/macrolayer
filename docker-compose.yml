@@ -1,0 +1,23 @@
+nginx:
+    build: ./macrolayer-nginx
+    links:
+        - login_instance_001:login_instance_001
+        - login_instance_002:login_instance_002
+    ports:
+        - "80:80"
+login_instance_001:
+    build: ./macrolayer-srv-login
+    links:
+        - mongo
+    ports:
+        - "8080"
+login_instance_002:
+    build: ./macrolayer-srv-login
+    links:
+        - mongo
+    ports:
+        - "8080"
+mongo:
+    build: ./macrolayer-mongodb
+    ports:
+        - "27017:27107"
