@@ -13,7 +13,7 @@ var mongoose    = require('mongoose');
 var helmet      = require('helmet');
 var cors        = require('cors');
 
-var config = require('./config'); // get our config file
+var config = require('./app/config/config'); // get config file
 
 // =======================
 // configuration =========

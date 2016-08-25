@@ -2,6 +2,8 @@
  * Created by charques on 22/8/16.
  */
 
+'use strict';
+
 module.exports = {
     'baseUrl' : '/macrolayer/api/login',
     'defaultPort' : 8080,

@@ -12,7 +12,12 @@
     "body-parser": "^1.15.2",
     "cors": "^2.8.0",
     "express": "^4.14.0",
+    "gulp": "^3.9.1",
+    "gulp-jshint": "^2.0.1",
+    "gulp-nodemon": "^2.1.0",
     "helmet": "^2.1.2",
+    "jshint": "^2.9.3",
+    "jshint-stylish": "^2.2.1",
     "jsonwebtoken": "^7.1.9",
     "mongoose": "^4.5.9",
     "morgan": "^1.7.0"

@@ -2,6 +2,8 @@
  * Created by charques on 23/8/16.
  */
 
+'use strict';
+
 var express = require('express');
 var jwt     = require('jsonwebtoken'); // used to create, sign, and verify tokens
 var router  = express.Router();
@@ -15,7 +17,9 @@ router.post('/', function(req, res) {
         name: req.body.name
     }, function(err, user) {
 
-        if (err) throw err;
+        if (err) {
+            throw err;
+        }
 
         if (!user) {
             res.json({ success: false, message: 'Authentication failed. User not found.' });

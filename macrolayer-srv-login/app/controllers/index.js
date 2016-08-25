@@ -2,6 +2,8 @@
  * Created by charques on 23/8/16.
  */
 
+'use strict';
+
 var express = require('express');
 var router = express.Router();
 var auth = require(__base + 'app/middlewares/auth');

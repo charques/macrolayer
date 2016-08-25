@@ -2,6 +2,8 @@
  * Created by charques on 23/8/16.
  */
 
+'use strict';
+
 var express = require('express');
 var router  = express.Router();
 var User    = require(__base + 'app/models/user');
@@ -15,10 +17,12 @@ router.get('/', function(req, res) {
 
 router.get('/:id', function(req, res) {
     User.findById(req.params.id, function (err, user) {
-        if (err) throw err;
+        if (err) {
+            throw err;
+        }
 
         res.json(user);
-    })
+    });
 });
 
 router.post('/', function(req, res) {
@@ -35,7 +39,9 @@ router.post('/', function(req, res) {
 
     // save the sample user
     user.save(function(err) {
-        if (err) throw err;
+        if (err) {
+            throw err;
+        }
 
         console.log('User saved successfully');
         res.json({ success: true });

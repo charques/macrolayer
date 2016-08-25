@@ -1,6 +1,9 @@
 /**
  * Created by charques on 23/8/16.
  */
+
+'use strict';
+
 var crypto  = require('crypto');
 
 function hash(password, secret) {

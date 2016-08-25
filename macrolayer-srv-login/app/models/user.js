@@ -2,6 +2,8 @@
  * Created by charques on 22/8/16.
  */
 
+'use strict';
+
 // get an instance of mongoose and mongoose.Schema
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
@@ -30,8 +32,9 @@ userSchema.pre('save', function(next) {
     this.updated_at = currentDate;
 
     // if created_at doesn't exist, add to that field
-    if (!this.created_at)
+    if (!this.created_at) {
         this.created_at = currentDate;
+    }
 
     next();
 });

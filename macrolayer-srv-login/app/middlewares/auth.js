@@ -2,6 +2,8 @@
  * Created by charques on 23/8/16.
  */
 
+'use strict';
+
 var jwt = require('jsonwebtoken');
 
 var authenticator = function(req, res, next) {
@@ -33,6 +35,6 @@ var authenticator = function(req, res, next) {
         });
 
     }
-}
+};
 
 module.exports = authenticator;
