@@ -2,16 +2,9 @@
 
 ## Building the MongoDB Docker image
 
-With our `Dockerfile`, we can now build the MongoDB image using Docker. Unless
-experimenting, it is always a good practice to tag Docker images by passing the
-`--tag` option to `docker build` command.
-
-    # Format: docker build --tag/-t <user-name>/<repository> .
-    # Example:
     $ docker build --tag charques/macrolayer-mongodb .
 
-Once this command is issued, Docker will go through the `Dockerfile` and build
-the image. The final image will be tagged `charques/macrolayer-mongodb`.
+The image will be tagged `charques/macrolayer-mongodb`.
 
 ## Pushing the MongoDB image to Docker Hub
 
@@ -62,8 +55,8 @@ If you want to run two containers on the same engine, then you will need to map
 the exposed port to two different ports on the host
 
     # Start two containers and map the ports
-    $ docker run -p 28001:27017 --name mongo_instance_001 -d my/repo
-    $ docker run -p 28002:27017 --name mongo_instance_002 -d my/repo
+    $ docker run -p 28001:27017 --name mongo_instance_001 -d charques/macrolayer-mongodb
+    $ docker run -p 28002:27017 --name mongo_instance_002 -d charques/macrolayer-mongodb
 
     # Now you can connect to each MongoDB instance on the two ports
     $ mongo --port 28001
