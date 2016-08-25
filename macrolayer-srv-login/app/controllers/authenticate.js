@@ -22,6 +22,7 @@ router.post('/', function(req, res) {
         }
 
         if (!user) {
+            res.status(401);
             res.json({ success: false, message: 'Authentication failed. User not found.' });
         } else if (user) {
 
@@ -30,6 +31,7 @@ router.post('/', function(req, res) {
             console.log(user.password);
             console.log(encryptedPassword);
             if (user.password !== encryptedPassword) {
+                res.status(401);
                 res.json({ success: false, message: 'Authentication failed. Wrong password.' });
             } else {
 
@@ -42,7 +44,7 @@ router.post('/', function(req, res) {
                 // return the information including token as JSON
                 res.json({
                     success: true,
-                    message: 'Enjoy your token!',
+                    message: 'Enjoy your token2!',
                     token: token
                 });
             }
