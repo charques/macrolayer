@@ -54,6 +54,11 @@ cors(corsOptions);
 // TODO tests
 
 // =======================
+// default users ========
+// =======================
+require('./app/middlewares/default-users');
+
+// =======================
 // error handling ========
 // =======================
 var errorHandling = require ('./app/middlewares/error');

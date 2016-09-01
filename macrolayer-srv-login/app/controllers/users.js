@@ -31,7 +31,7 @@ router.post('/', function(req, res) {
 
     // create a sample user
     var user = new User({
-        name: req.body.name,
+        email: req.body.email,
         password: hash(req.body.password, req.app.get('secret-key')),
         admin: req.body.admin
     });
